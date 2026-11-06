@@ -5,15 +5,21 @@ int main() {
 
     int n ; 
     cin >> n ;
-    // pattern 6 decreasing numbered ladder ; 
     for( int i = 0 ; i < n ; i++){
-        for( int j = 1 ; j <= n - i ; j++){
-            cout << j ;
-        }
-        cout << endl ;
+    //space 
+    for( int j = 0  ; j < n - i - 1 ; j++){
+    cout << " " ; 
     }
-
-
+    for( int j = 0 ; j < 2 * i + 1 ; j++){
+cout << "*" ;
+    }
+    
+for( int j = 0 ; j < n - i - 1 ; j++){
+    cout << " " ;
+}
+cout << endl ;
+    }
+    
 
     return 0 ; 
 
