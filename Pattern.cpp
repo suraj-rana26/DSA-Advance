@@ -2,13 +2,16 @@
 using namespace std;
 
 void print13(int n) {
-// pattern 14 ; Letter triangle 
-for(int i = 0 ; i < n ; i++){
-  for(char ch = 'A' ; ch <= 'A' + i  ; ch++){
+// pattern 14 ; Letter triangle Inverted 
+for( int i = n ; i > 0; i--){
+  for( char ch = 'A' ; ch <= 'A'+ i ; ch++){
     cout << ch ; 
+
   }
   cout << endl ;
 }
+
+
 
 
 
