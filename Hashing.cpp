@@ -35,8 +35,8 @@ return 0 ;
 
 } */
 // Character hashing 
-
-#include <bits/stdc++.h>
+// NOTE DOWN IN COPY BABU SAHHAB NOTE UNDERSTAND SAMAJ LENA BABUA 
+ /* #include <bits/stdc++.h>
 using namespace std ; 
 
 int main() {
@@ -60,5 +60,38 @@ cin >> q ;
 
 
     return 0 ;
+
+} */
+
+// NOW WE HAVE NUMBER HASING BUT DONT KNOW WHY IT HAS BE DOENE 
+// NOTE DOWN IN THE COPY BABUA 
+#include <bits/stdc++.h>
+using namespace std ; 
+
+int main() {
+int n ; 
+cin >> n  ;
+int arr[n] ;
+for(int i = 0 ; i < n ; i++){
+    cin >> arr[i] ; 
+
+}
+// Precompuate 
+map<int , int > mpp ; 
+for( int i = 0 ; i < n ; i++){
+    mpp[arr[i]]++ ; 
+
+}
+int q ; 
+cin >> q ; 
+while(q--) {
+    int number ;
+    cin >> number ; 
+    // Fetch 
+    cout << mpp[number] << endl ;
+}
+
+
+    return 0 ; 
 
 }
