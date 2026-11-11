@@ -2,23 +2,21 @@
 using namespace std ;
 
 int main() {
-    // Count odd digits in the number
-    int n;
-    cin >> n;
+ // reverse the number 
+ int n ; 
+ cin >> n ; 
+ int rev = 0 ; 
+while( n > 0){
+  int lastd = n % 10 ; 
+  rev = rev * 10  + lastd ; 
+  n /= 10 ; 
+}
 
-    int oddNum = 0, evenNum = 0;
+cout << rev << endl ;
 
-    while (n > 0) {
-        int lastd = n % 10;
-        if (lastd % 2 == 0) {
-            evenNum++;
-        } else {
-            oddNum++;
-        }
-        n /= 10;
-    }
 
-    cout << oddNum;
+
+
     return 0;
 }
 
