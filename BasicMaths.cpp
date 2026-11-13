@@ -2,21 +2,19 @@
 using namespace std ;
 
 int main() {
+// Divisor of a Number
 int n ; 
-cin >> n  ;
-int max = 0 ;
+cin >> n ; 
+  for( int i = 1 ; i <= n ; i++){
+    if( n % i == 0 ){
+      cout << i  << endl ; 
+    }
+  }
 
-while( n > 0 ){
-  int lastD = n % 10 ;
 
-if( lastD >  max ){
-  max = lastD ; 
 
-} 
-    n /= 10 ;
-  
-}
-cout << max ;
+
+
 
     return 0;
 }
