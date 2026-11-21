@@ -1,33 +1,44 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void print12(int n) {
-// Number 
-for(int i = 1 ; i <= n ; i++){
-// Number 
-for( int j = 1 ; j <= i ; j++ ){
-  cout << j  ;
+void print20(int n) {
 
-} 
-// Space 
-for(int j = 0 ; j < 2 * ( n - i) ; j++){
-  cout << " "  ;
+    int breakpoint = n;
+
+    for (int i = 1; i <= 2 * n - 1; i++) {
+
+        int stars = i;
+        int spaces = 2 * (n - i);
+
+        if (i > breakpoint) {
+            stars = 2 * n - i;
+            spaces = 2 * (i - n);
+        }
+
+        // Left stars
+        for (int j = 1; j <= stars; j++) {
+            cout << "*";
+        }
+
+        // Spaces
+        for (int j = 1; j <= spaces; j++) {
+            cout << " ";
+        }
+
+        // Right stars
+        for (int j = 1; j <= stars; j++) {
+            cout << "*";
+        }
+
+        cout << endl;
+    }
 }
 
-// Number 
-for(int j = i ; j >= 1 ; j--){
-  cout << j ;
-
-
-
-}
-cout << endl ;
-}
-
-
-}
 int main() {
-  int n ; 
-  cin >> n ;
-  print12(n) ;
+    int n;
+    cin >> n;
+
+    print20(n);
+
+    return 0;
 }
