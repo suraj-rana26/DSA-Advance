@@ -1,33 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void print21(int n) {
-for(int i = 0 ; i <= n - 1 ; i++){
- for( int j = 0 ; j <=  n - 1 ; j++){
-  if (i == 0 || j == n - 1 || j == 0|| i == n - 1) {
-  cout << "*" ;
- }
- else {
-  cout << " " ;
+void print12(int n) {
+// Number 
+for(int i = 1 ; i <= n ; i++){
+// Number 
+for( int j = 1 ; j <= i ; j++ ){
+  cout << j  ;
 
- }
-}
- cout << endl ;
-
-
+} 
+// Space 
+for(int j = 0 ; j < 2 * ( n - i) ; j++){
+  cout << " "  ;
 }
 
+// Number 
+for(int j = i ; j >= 1 ; j--){
+  cout << j ;
 
 
 
-
-
-
+}
+cout << endl ;
+}
 
 
 }
 int main() {
   int n ; 
   cin >> n ;
-  print21(n) ;
+  print12(n) ;
 }
